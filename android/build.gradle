@@ -22,6 +22,7 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 
 android {
+    namespace "com.magugi.volume_watcher"
     compileSdkVersion 30
 
     defaultConfig {
