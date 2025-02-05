@@ -22,7 +22,10 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 
 android {
-    namespace "com.magugi.volume_watcher"
+    // Conditional for compatibility with AGP <4.2.
+    if (project.android.hasProperty("namespace")) {
+        namespace "com.magugi.volume_watcher"
+    }
     compileSdkVersion 30
 
     defaultConfig {
